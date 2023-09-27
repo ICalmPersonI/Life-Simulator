@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GameOfLife</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="rest">Reset</string>
+    <string name="game_field_dimensions">Game field dimensions:</string>
+    <string name="game_speed">Game speed:</string>
+    <string name="generation">Generation: %s</string>
+    <string name="alive_cells">Alive cells: %s</string>
+    <string name="dead_cells">Dead cells: %s</string>
+    <string name="oldest_cell">Oldest cell: %s</string>
+    <string name="cell_cluster_thickness">Cell cluster thickness:</string>
+    <string name="game_rules">Game rules</string>
+    <string name="settings">Setting</string>
+    <string name="game_statistics">Game statistics</string>
+    <string name="control_buttons">Control buttons</string>
+    <string name="cell_survives_when_it_has">A cell survives when it has %d to %d neighbors:</string>
+    <string name="cell_comes_to_life_when_it_has">"A cell comes to life when it has %d neighbors:"</string>
+
+
+    <string name="neighborhood_type">Neighborhood type: </string>
+    <string name="neighborhood_range">Neighborhood range: </string>
+
+</resources>

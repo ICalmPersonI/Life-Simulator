@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_cell_cluster_thickness">1</integer>
+    <integer name="max_cell_cluster_thickness">10</integer>
+
+    <integer name="min_game_speed">1</integer>
+    <integer name="max_game_speed">100</integer>
+
+    <integer name="min_cell_size">1</integer>
+    <integer name="max_cell_size">30</integer>
+
+    <!--
+    When the value is greater than 5, a very large area is being checked for neighbors,
+    which becomes a significant load on the processor.
+    Although it all depends on the device, the game area and the speed of the game. -->
+    <integer name="min_neighborhood_range">1</integer>
+    <integer name="max_neighborhood_range">5</integer>
+
+    <integer name="min_survival_range">1</integer>
+    <integer name="max_survival_range">4</integer>
+
+    <integer name="min_revival_range">1</integer>
+    <integer name="max_revival_range">5</integer>
+</resources>

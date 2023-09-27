@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="label_font_size">26dp</dimen>
+    <dimen name="default_font_size">18dp</dimen>
+    <dimen name="drop_down_menu_font_size">20dp</dimen>
+    <dimen name="control_buttons_font_size">20dp</dimen>
+    <dimen name="control_buttons_height">50dp</dimen>
+    <dimen name="drawer_content_width">350dp</dimen>
+</resources>
