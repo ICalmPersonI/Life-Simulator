@@ -1,7 +1,6 @@
 package com.calmperson.gameoflife.ui.activity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -9,6 +8,7 @@ import com.calmperson.gameoflife.di.application.GameApplication
 import com.calmperson.gameoflife.ui.handler.DrawerContentHandler
 import com.calmperson.gameoflife.ui.handler.GameFieldHandler
 import com.calmperson.gameoflife.ui.screen.Root
+import com.calmperson.gameoflife.ui.theme.GameOfLifeTheme
 import com.calmperson.gameoflife.ui.viewmodel.UiModel
 import kotlin.math.roundToInt
 
@@ -29,50 +29,52 @@ class MainActivity : ComponentActivity() {
         drawerContentHandler = viewModel.drawerContentHandler
 
         setContent {
-            Root(
-                gameField = gameFieldHandler.gameField,
-                isPaintingModeEnable = gameFieldHandler.isPaintingModeEnable,
-                gameStats = drawerContentHandler.gameStatistics,
-                gameRules = drawerContentHandler.gameRules,
-                gameSettings = drawerContentHandler.gameSettings,
-                neighborhoodTypeVisualisation = drawerContentHandler.neighborhoodTypeVisualisation,
-                changeCellSize = drawerContentHandler::changeCellSize,
-                changeCellClusterThickness = { thickness ->
-                    drawerContentHandler.changeCellClusterThickness(
-                        thickness.roundToInt()
-                    )
-                },
-                changeGameSpeed = { speed -> drawerContentHandler.changeGameSpeed(speed.roundToInt()) },
-                changeNeighborhoodType = drawerContentHandler::changeNeighborhoodType,
-                changeNeighborhoodRange = { range ->
-                    drawerContentHandler.changeNeighborhoodRange(
-                        range.roundToInt()
-                    )
-                },
-                changeSurvivalRange = { float ->
-                    val intValue = float.toInt()
-                    drawerContentHandler.changeSurvivalRange(intValue..intValue + 1)
-                },
-                changeRevivalNeighborCount = { float ->
-                    drawerContentHandler.changeRevivalNeighborCount(
-                        float.roundToInt()
-                    )
-                },
-                onStartButtonClick = drawerContentHandler::startGame,
-                onStopButtonClick = drawerContentHandler::stopGame,
-                onResetButtonClick = drawerContentHandler::resetGame,
-                onGameFieldClick = gameFieldHandler::addCells,
-                onPencilButtonClick = {
-                    with(gameFieldHandler) {
-                        if (isPaintingModeEnable.value) {
-                            disablePaintingMode()
-                        } else {
-                            enablePaintingMode()
+            GameOfLifeTheme {
+                Root(
+                    gameField = gameFieldHandler.gameField,
+                    isPaintingModeEnable = gameFieldHandler.isPaintingModeEnable,
+                    gameStats = drawerContentHandler.gameStatistics,
+                    gameRules = drawerContentHandler.gameRules,
+                    gameSettings = drawerContentHandler.gameSettings,
+                    neighborhoodTypeVisualisation = drawerContentHandler.neighborhoodTypeVisualisation,
+                    changeCellSize = drawerContentHandler::changeCellSize,
+                    changeCellClusterThickness = { thickness ->
+                        drawerContentHandler.changeCellClusterThickness(
+                            thickness.roundToInt()
+                        )
+                    },
+                    changeGameSpeed = { speed -> drawerContentHandler.changeGameSpeed(speed.roundToInt()) },
+                    changeNeighborhoodType = drawerContentHandler::changeNeighborhoodType,
+                    changeNeighborhoodRange = { range ->
+                        drawerContentHandler.changeNeighborhoodRange(
+                            range.roundToInt()
+                        )
+                    },
+                    changeSurvivalRange = { float ->
+                        val intValue = float.toInt()
+                        drawerContentHandler.changeSurvivalRange(intValue..intValue + 1)
+                    },
+                    changeRevivalNeighborCount = { float ->
+                        drawerContentHandler.changeRevivalNeighborCount(
+                            float.roundToInt()
+                        )
+                    },
+                    onStartButtonClick = drawerContentHandler::startGame,
+                    onStopButtonClick = drawerContentHandler::stopGame,
+                    onResetButtonClick = drawerContentHandler::resetGame,
+                    onGameFieldClick = gameFieldHandler::addCells,
+                    onPencilButtonClick = {
+                        with(gameFieldHandler) {
+                            if (isPaintingModeEnable.value) {
+                                disablePaintingMode()
+                            } else {
+                                enablePaintingMode()
+                            }
                         }
                     }
-                }
 
-            )
+                )
+            }
         }
     }
 
