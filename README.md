@@ -16,9 +16,9 @@ This is an Android application that implements the classic game of "Life" with t
 
 Screenshots
 ---------------
-<img src="https://github.com/ICalmPersonI/LifeSimulator/assets/87424785/45f75acc-5854-4ac4-b727-5b48b64207f1" alt="1" width="180" height="300">
-<img src="https://github.com/ICalmPersonI/LifeSimulator/assets/87424785/7b221cd5-2c17-436c-b331-5b50ecfc9d00" alt="2" width="180" height="300">
-<img src="https://github.com/ICalmPersonI/LifeSimulator/assets/87424785/babd9ed6-6831-4787-a818-74c2ecb5a63b" alt="3" width="180" height="300">
+<img src="https://github.com/ICalmPersonI/Life-Simulator/assets/87424785/fa68c441-d7b4-4633-8f5e-3aab09ae7e4b" alt="1" width="180" height="300">
+<img src="https://github.com/ICalmPersonI/Life-Simulator/assets/87424785/86ce068b-8849-4c93-90f8-d83da4425235" alt="2" width="180" height="300">
+<img src="https://github.com/ICalmPersonI/Life-Simulator/assets/87424785/b0ed88ea-6385-474c-93fb-216b465b1b15" alt="3" width="180" height="300">
 
 Tech Stack
 ---------------
