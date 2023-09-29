@@ -14,7 +14,7 @@
     which becomes a significant load on the processor.
     Although it all depends on the device, the game area and the speed of the game. -->
     <integer name="min_neighborhood_range">1</integer>
-    <integer name="max_neighborhood_range">5</integer>
+    <integer name="max_neighborhood_range">4</integer>
 
     <integer name="min_survival_range">1</integer>
     <integer name="max_survival_range">4</integer>

@@ -1,7 +1,6 @@
 package com.calmperson.gameoflife.domain
 
 import com.calmperson.gameoflife.data.local.DataManager
-import com.calmperson.gameoflife.data.mapper.JsonMapper
 import com.calmperson.gameoflife.data.mapper.JsonMapper.fromJson
 import com.calmperson.gameoflife.data.mapper.JsonMapper.toJson
 import com.calmperson.gameoflife.model.Cell
@@ -226,6 +225,7 @@ class GameEngine @Inject constructor(
             .loadData(String::class, GAME_SETTINGS_SAVE_FILE_NAME)?.let { json ->
                 fromJson(json, GameSettings::class.java)
             } ?: DEFAULT_GAME_SETTINGS
+        delay = calculateDelay(_gameSettings.value.gameSpeed)
     }
 
     fun saveGameStats() {
