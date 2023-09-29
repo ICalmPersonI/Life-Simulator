@@ -8,8 +8,10 @@ This is an Android application that implements the classic game of "Life" with t
 2. **Game Speed**: You can adjust the game speed to generate new generations faster or slower.
 3. **Game Board Size**: Modify the game board size according to your preferences by selecting the number of rows and columns.
 4. **Progress Saving**: The app automatically saves your progress, so you can resume your game later.
-5. **Manual Interaction with the Game Board**: In addition to automatic cell generation, you can manually add or remove live cells on the game board by tapping on them.
+5. **Manual Interaction with the Game Board**: In addition to automatic cell generation, you can manually add cells on the game board by tapping on them.
 6. **Cell Color Based on Age**: The color of each cell depends on its age, starting from green for the youngest cells.
+7. **Cyclic Game Board**: The game board is cyclic and has no boundaries, meaning cells on the edges wrap around to the opposite side.
+
 
 
 Screenshots
